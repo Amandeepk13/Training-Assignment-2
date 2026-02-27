@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="/images/cambridge-logo-black-transparent.png" alt="logo" class="logo">
+            </div>
+            <div class="menu">
+                <div class="user">
+                    <button type="submit" class="new-login" id="nav-login-btn" form="main-login-form">Login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+
+    
+    <main class="login-body">
+        <div class="login-container">
+            
+            <h2 class="login-heading">Login</h2>
+            <form class="loginForm" id="main-login-form">
+
+                <div class="login-group">
+                    <label for="username">Enter your username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="login-group">
+                    <label for="password">Enter your password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="login-footer">
+                    <button type="submit" class="new-login">Login</button>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+</div>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>
