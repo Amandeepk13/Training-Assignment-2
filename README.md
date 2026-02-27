@@ -19,4 +19,4 @@ This assignment is a full stack app built using **Node.js, Express, MongoDB, Ses
 ![image alt](https://github.com/Amandeepk13/Training-Assignment-2/blob/d1fd59308af8404de4a3ec3e1d996bf911fdc473/capture_20260227110340946.bmp)
 
 ## Class View
-![image alt](https://github.com/Amandeepk13/Training-Assignment-2/blob/d1fd59308af8404de4a3ec3e1d996bf911fdc473/capture_20260227110340946.bmp)
+![image alt](https://github.com/Amandeepk13/Training-Assignment-2/blob/e1b2f739a7124c2d69d1087b60b477bf2337d7ec/capture_20260227110530731.bmp)
