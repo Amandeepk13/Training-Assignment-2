@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box; 
+}
+
+html, body{
+    font-family: 'Mulish', sans-serif !important;
+    margin:0;
+    padding:0;
+}
+
+.main{
+    margin-top: 56px;
+    display:flex;
+    justify-content: center;
+    transition: right 0.2s ease;
+    width: 100%;
+}
+
+.main-content {
+    width: 100%;
+    max-width:1000px;
+    padding: 20px;
+}
+
+body.sidebar-open .main {
+    padding-right: 200px;
+}
+
+
+.welcome, .welcome-msg{
+    font-size: 40px;
+    color: rgb(124, 120, 120);
+    font-weight: 200;
+}
+
+.nav-tabs{
+    border-bottom: 2px solid rgb(186, 185, 185);
+    padding: 0 0 10px 0;
+    margin: 11px 0 9px;
+}
+.nav{
+    display: inline-flex;
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    gap: 18px;
+}
+.nav-heading{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.nav-link{
+    text-decoration: none;
+}
+
+.school {
+    margin:20px 0;
+    padding: 15px 0;
+}
+.school-name{
+    font-size: 12px;
+    margin:0 0 15px 0;
+}
+
+.school-data{
+    display: flex;
+    gap: 10px;
+}
+.sort-btn{
+    background-color: rgb(120 61 197);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.sort-btn:hover{
+    background-color: rgb(156 87 239);
+
+}
+
+.sort-criteria span{
+    font-size: 14px;
+    color: rgb(124, 120, 120);
+}
+
+.card-container{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8px;
+    color: rgb(120 61 197);
+    background-color: rgb(219, 192, 252);
+}
+.left-header{
+    padding: 0 10px ;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+.card-add{
+    display: flex;
+    flex-direction: row;
+    gap:6px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(198, 195, 195);
+}
+.add-box{
+    display:flex;
+    flex-direction: column;
+    width:50px;
+    height:50px;
+    align-items: center;
+    border: 1px dashed rgb(120, 119, 119);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-icons{
+    display: flex;
+    justify-content: space-between;
+    text-align:center;
+}
+.icon-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    padding: 8px 8px 15px;
+}
+.icon-item i{
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: rgb(219, 192, 252);
+    border-radius: 2px;
+}
+
+
+
+.school-class{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-class{
+    background-color: white;
+    border:3px solid rgb(120 61 197);
+    color: rgb(83, 8, 181);
+    padding: 8px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.new-class:hover{
+    background-color: rgb(120 61 197);
+    color: white;
+}
+.course-info{
+    padding:10px;
+}
+
+@media (max-width: 864px){
+    
+    .main-content{
+        padding:10px;
+    }
+    .welcome-msg{
+        font-size:25px;
+    }
+    .nav{
+        gap:10px;
+    }
+    .card{
+        max-width: 300px;
+    }
+    .card-container{
+        max-width: 700;
+        row-gap: 10px;
+    }
+    body.sidebar-open .main {
+       padding-right: 0;
+   }
+}
+
+@media (max-width: 630px){
+    .card-container{
+        max-width: 550px;
+        grid-template-columns: 1fr;
+
+    }
+    .card{
+        max-width: 400px;
+    }
+}

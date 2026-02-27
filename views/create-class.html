@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Class</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/create-class.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="/images/cambridge-logo-black-transparent.png" alt="logo" class="logo">
+            </div>
+            <div class="menu">
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="user">
+                    <select id="user-type">
+                        <option value="username" selected>username</option>
+                        <option value="school">Join a School</option>
+                        <option value="help">Help</option>
+                        <hr> <option value="logout">Logout</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class="class-container">
+         <main class = "class-creation">
+              <nav class="back-to-db">
+                <a href='/dashboard' id="close-form">
+                    <i class="fa fa-angle-left"></i>Back
+                </a>
+
+               </nav>
+                <div class="form-container">
+                    <h1 class="form-heading"> Enter class details</h1>
+
+                    <form  class="class-form">
+
+                        <div class="form-group">
+                            <label for="form-class-title"> Enter class name</label>
+                            <input type="text" id="form-class-title" name="classTitle" placeholder="e.g. Practice 1" maxlength="50">
+
+                        </div>
+                        
+                        <div class="class-schedule">
+
+                            <div class="form-group">
+                              <label for="start-date">Start date</label>
+                              <div class="form-input">
+                                <i class="far fa-calendar-alt"></i>
+                                <input type="date" id="start-date">
+                                <i class="fa fa-caret-down"></i>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="end-date">End date</label>
+                              <div class="form-input">
+                                <i class="far fa-calendar-alt"></i>
+                                <input type="date" id="end-date" >
+                                <i class="fa fa-caret-down"></i>
+                              </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="school-select"> This class will be in...</label>
+                            <div class="form-input">
+                                <input type="text" id="school-select">
+                                
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            
+                            <div class="form-button">
+                                <button type="reset" class="btn-cancel">Cancel</button>
+                                <button type="submit" class="btn-create"> Create</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+         </main>
+
+    </div>
+
+    <script src="/js/create-class.js"></script>
+</body>
+</html>

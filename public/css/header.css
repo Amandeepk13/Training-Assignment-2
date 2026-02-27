@@ -1,0 +1,41 @@
+:root{
+    --navbar-color: rgb(156 87 239);
+}
+.navbar{
+    background-color: var(--navbar-color);
+    height: 56px;
+    top:0;
+    left:0;
+    position: fixed;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    z-index: 1000;
+}
+.logo{
+    padding: 8px;
+    width: 140px;
+    height: 40px;
+    filter: invert(1) brightness(2);
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.notification i{
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
+}
+.user select{
+    background-color: var(--navbar-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+}
