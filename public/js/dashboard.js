@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     usertypeSelect.addEventListener('change', async (e) => {
          if(e.target.value === 'logout'){
-            const response = await fetch('/logout');
+            const response = await fetch('/api/logout');
             if(response.ok){
                 window.location.href = '/login';
             }
