@@ -1,10 +1,8 @@
 const Class = require('../models/Class');
+const Rows = require('../config/Rows');
 
 exports.getClasses = async (req,res) => {
   try{
-      if(!req.session.userId){
-        return res.status(401).json({error: 'Not logged in'});
-      }
       const classes = await Class.find({user: req.session.userId});
       res.json(classes);
     } catch(err){
@@ -14,35 +12,12 @@ exports.getClasses = async (req,res) => {
 
 exports.createClass = async(req,res) => {
     try{
-    if(!req.session.userId){
-      return res.status(401).json({error: 'Not logged in'});
-    }
     const {name, startDate, endDate} = req.body;
     const newClass = new Class({
       name, startDate, endDate, 
       user: req.session.userId,
-      rows: [
-        {
-          rowName: 'ABC',
-          flag: true
-        },
-        {
-          rowName: 'DEF',
-          flag: false
-        },
-        {
-          rowName: 'GHI',
-          flag: true
-        },
-        {
-          rowName: 'JKL',
-          flag: true
-        },
-        {
-          rowName: 'MNO',
-          flag: false
-        }
-      ]});
+      rows: Rows
+    });
     await newClass.save();
     res.status(201).json(newClass);
   } catch(err){
@@ -52,9 +27,7 @@ exports.createClass = async(req,res) => {
 
 exports.getClassByUUID = async(req,res) => {
   try{
-    if(!req.session.userId){
-      return res.status(401).json({error: 'Not logged in'});
-    }
+    
     const flag = req.query.flag;
     const uuid = req.params.uuid;
     const user = req.session.userId;

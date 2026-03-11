@@ -36,8 +36,6 @@ exports.logout = (req,res) => {
 }
 
 exports.getUser = (req,res) => {
-  if(!req.session.userId){
-    return res.json({error: 'Not logged in'});
-  }
+
   res.json({username: req.session.username});
 }

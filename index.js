@@ -4,7 +4,7 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 
-const connectDB = require('./config/db')
+const connectDB = require('./database/connectn')
 
 const userRoutes = require('./routes/userRoutes');
 const classRoutes = require('./routes/classRoutes');
@@ -12,6 +12,7 @@ const viewRoutes = require('./routes/viewRoutes');
 
 
 const app = express();
+
 connectDB();
 
 app.use(express.json());
