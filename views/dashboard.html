@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge University Press</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="/images/cambridge-logo-black-transparent.png" alt="logo" class="logo">
+            </div>
+            <div class="menu">
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="user">
+                    <select id="user-type">
+                        <option value="username" selected>username</option>
+                        <option value="school">Join a School</option>
+                        <option value="help">Help</option>
+                        <hr> <option value="logout">Logout</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <div class="main">
+
+        <main class="main-content" id="main-content">
+
+            <section class="welcome">
+                <h1 class="welcome-msg" title="welcome-username"></h1>
+            </section>
+
+
+            <nav class="nav-tabs">
+                <ul class="nav">
+                    <li class="myclasses"><a class="nav-link" href="#"><span class="nav-heading">My Classes</span> </a>
+                    </li>
+                    <li class="mylibrary"><a class="nav-link" href="#"><span class="nav-heading">My Library</span></a>
+                    </li>
+                    <li class="mytraining"><a class="nav-link" href="#"><span class="nav-heading">My Training</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="school">
+
+                <div class="school-class">
+                    <h3 class="school-name">GTBIT college </h3>
+                    <a href='/create-class'>
+                    <button class="new-class" type="button">create a class</button>
+                    </a>
+                </div>
+
+
+                <div class="school-data">
+                    <div class="sort-filter">
+                        <button class="sort-btn" type="button"> Sort / Filter</button>
+                    </div>
+                    <div class="sort-criteria">
+                        <span> Class name (A-Z) / All materials</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="card-container" id="card-holder">
+
+                
+            </section>
+        </main>
+    </div>
+
+
+
+    <aside class="sidebar-container" id="sidebar">
+        <div class="sidebar">
+            <div class="sidebar-title">
+                <i class="fa fa-angle-left" id="close-sidebar"></i>
+                <h3>Sort by</h3>
+            </div>
+
+            <div class="sort-options">
+                <label>
+                    <input type="radio" name="sort" value="class-name" > Class Name
+                </label>
+                <label>
+                    <input type="radio" name="sort" value="start-date"> Start Date
+                </label>
+                <label>
+                    <input type="radio" name="sort" value="end-date"> End Date
+                </label>
+            </div>
+            <hr>
+            <div class="sort-order">
+                <div class="icon">
+                    <i class="fa fa-caret-up"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+
+                <span> A-Z </span>
+
+            </div>
+            <hr>
+            <div class="filter-section">
+                <div class="filter-header">
+                    <h3>Filter by</h3>
+                    <i class="fa fa-angle-right" id="filter-arrow"></i>
+                </div>
+
+                <div class="filter-options" id="filter-options-types">
+                    <!-- 
+                    <div class="filter-choice">
+                         <input type="checkbox" class="filter-check" value="Practice"> Practice
+                    
+                    </div>
+                    <div class="filter-choice">
+                        <input type="checkbox" class="filter-check" value="Resource"> Resource
+                    </div>
+                   -->
+                    
+                </div>
+
+                <div class="filter-btn">
+                    <button class="sidebar-btn clear" id="clear-filters"> Clear all</button>
+                    <button class="sidebar-btn apply" id="apply-filters">Apply</button>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+    
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+
+</html>
